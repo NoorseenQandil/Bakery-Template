@@ -1,0 +1,325 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+:root{
+    --font-size:17px;
+    --firest-font-size:18px;
+    --second-font-size:22px;
+    --font-size-icon:20px;
+    --third-font-size:24px;
+    --fourth-font-size:32px;
+    --firest-color:#fafafa;
+    --second-color:#e0c690;
+    --third-color: #8e7754;
+    --fourth-color:#ffffff;
+    --fifth-color:#222222;
+    --sixth-color:#333333;
+    --siven-color:#686868;
+    --icon-color: #8e7754;
+}
+
+.brdr{
+    width: 80px;
+    height: 2px;
+    background-color:var(--second-color);
+    position: absolute;
+    top: 0px;
+    left: 75%;
+}
+
+/*Nav*/
+.Home .nav{
+    margin: 15px;
+}
+.Home .nav .logo{
+    vertical-align: middle;
+    width: 20%;
+    padding-top: 3px;
+    padding-left: 60px;
+    display: inline-block;
+}
+.Home .nav .logo img{
+    width: 100%;
+}
+.Home .nav ul{
+    list-style-type: none;
+    vertical-align: middle;
+    display: inline-block;
+    margin-left: 18%;
+    padding-left: 20%;
+   
+}
+.Home .nav  ul li{  
+    display: inline-block;    
+} 
+.Home .nav  ul li a{
+    font-size: 18px;
+    color: #787575;
+    text-decoration: none;
+    font-family: Alegreya-Regular; 
+    transition: all 0.3s;
+    padding-left: 26px;
+}
+.Home .nav  li:nth-child(4) a{
+    color: #000 ;    
+}
+.Home .nav ul li:not(:nth-child(4)) a:hover {
+    Color:var(--second-color);
+}
+.brdr{
+    width: 80px;
+    height: 2px;
+    background-color:var(--second-color);
+    position: absolute;
+    top: 0px;
+    left: 75%;
+}
+
+/*Caption Section*/
+.caption{
+    font-family: 'Alegreya', sans-serif;
+    background-color: #f8f8f8;
+    text-align: center;
+    padding:50px;
+}
+.caption h1{
+    font-weight: 400;
+    font-size: 56px;
+}
+.caption p{
+    font-size: 18px;
+    font-weight: 400;
+}
+
+/*Images Section*/
+.gallery{
+    margin:0px -15px;
+    padding:60px 139.4px 60px 139.6px;
+    display: flex;
+    justify-content: center;
+}
+.gallery .row{
+    overflow: hidden; 
+    padding:0px 15px;
+    margin: 0;
+}
+.gallery .row .element{
+    width: 33.333333%;
+    float: left;
+    height: 65vh;
+    position: relative;
+    margin:0px;padding:5px;
+}
+.gallery .row .element img{width: 100%; height: 100%;}
+.gallery .row .element .overLayer{
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.9);
+  margin-top: 27px;
+  top: 50%; bottom: 50%; left: 50%; right: 50%;
+  transition:all 0.5s ease 0s;
+  opacity: 0;
+}  
+.gallery .row .element .overLayer a{
+    padding: 10px; 
+    text-decoration: none;
+    background-color:#333333;
+}
+.gallery .row .element .overLayer i{
+  color: var(--fourth-color); 
+  padding-top: 60%;
+  left: 10px;
+}
+.gallery .row .element .overLayer i:hover{
+  color: var(--pink-color);
+}
+.gallery .row .element:hover .overLayer{
+    transition: top 1s; 
+    top:0; 
+    opacity: 0.4;
+}
+.gallery .row .element:hover img{
+    transform: scale-y(1.1);  
+    padding: 10px; opacity: 0.8;
+}
+  
+/********************************************************************************/
+
+/*About Section*/
+/* start contact */
+#contact{
+    height: 70vh;
+    background-color: #403d38;
+}
+#contact .contact-container{
+
+    padding: 50px 80px;
+}
+#contact .contact-container .about-us{
+    float: left;
+    width: calc(100%/4);    
+}
+#contact .contact-container .about-us p{
+    color: #969696;
+    line-height: 25px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 35px;
+    padding: 10px;
+}
+#contact .contact-container .special{
+    float: left;
+    width: calc(100%/4);
+}
+#contact .contact-container .oppining-hours{
+    float: left;
+    width: calc(100%/4);
+}
+#contact .contact-container .contact-details{
+    float: left;
+    width: calc(100%/4);
+    position: relative;
+}
+#contact .contact-container .contact-details::before{
+    content: "";
+    background-image: url(../images/contact-details-map.png);
+    background-repeat: no-repeat;   
+    background-position: center 80%;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.1;
+}
+#contact .contact-container h4{
+    padding-top: 15px;
+    font-family:AlegreyaSans-Regular ;
+    font-weight: 400;
+    font-size: var(--firest-font-size);
+    line-height: 32px;
+    color:var(--fourth-color);
+}
+#contact .contact-container p{
+
+    padding-top: 15px;
+    font-family:AlegreyaSans-Regular ;
+    font-weight: 400;
+    line-height: 32px;
+    Color:#969696;
+    width: 90%;
+    
+}
+#contact .contact-container ul{
+
+    list-style-type: none;
+    margin-top: 10px;   
+}
+#contact .contact-container ul li{
+    padding: 10px 0px;
+}
+#contact .contact-container .oppining-hours 
+,.special ul li i{
+    Color:rgba(150, 150, 150 , 0.5);
+    font-size: 11px;
+}
+#contact .contact-container .contact-details ul li i{
+    Color:#969696;
+}
+#contact .contact-container ul li span{
+    padding-left: 4px;
+    font-family:AlegreyaSans-Regular ;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 32px;
+    color:#969696;
+}
+
+#contact .contact-container ul li span a{
+    color:#969696;
+    text-decoration: none;
+    transition: all 1s;
+
+}
+#contact .contact-container ul li:not(:last-child) {
+    border-bottom: solid 1px rgba(150, 150, 150, 0.1) ;
+    width:85%;
+    
+}
+#contact .contact-details .ancor:hover a {
+    color: #e0e0e0;
+}
+
+/* ------------- end contact --------- */
+/* =================================== */
+
+/* start footer */
+#footer{
+    background-color: #353330;
+    text-align: center;
+    height: 50vh;
+    padding: 80px;
+    
+}
+#footer h6{
+    padding: 30px 60px;
+    font-size: 15px;
+    color:rgba(150, 150, 150, 0.7);
+    font-family:AlegreyaSans-Regular ;
+    font-weight: 400;
+}
+
+#footer ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+#footer a {
+   
+    color:rgba(150, 150, 150, 0.7);
+    position: relative;
+
+}
+#footer ul a li{
+    border: solid 1px  transparent;
+    margin: 5px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #403d38;
+    transition: all 0.3s;
+    
+}
+#footer ul a li i{
+
+    line-height: 40px;
+    font-size: 20px;
+}
+
+
+#footer .facebook:hover li{
+    background-color:#3b5998;
+    color: #fff;
+    
+}
+#footer .google:hover li{
+    background-color: #dd4b39;
+    color: #fff;
+
+}
+#footer .linkedin:hover li{
+    background-color:#007bb5 ;
+    color: #fff;
+
+}
+#footer .twitter:hover li{
+    background-color: #00aced;
+    color: #fff;
+
+}
+/* ------------- end footer --------- */
+/* =================================== */
